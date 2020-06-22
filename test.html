@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>One-AI</title>
+</head>
+
+<body>
+	<script type="text/javascript" src="api.js"></script>
+	<script type="text/javascript">
+		function User() {
+			return {
+				pd_id: 124022,  		// 用户账户ACCOUNT
+				pd_key: "N2YcXdN6WHqzMaqS8YoFGATcpU/LGnIh", // 用户授权KEY
+				app_id: 1000001,		// 保留
+				app_key: "123456",		// 保留
+				pred_type: 30400, 			// 验证码类型
+			};
+		}
+		function SelectFile() {
+			var pd = User();
+			var pd_id = pd.pd_id;
+			var pd_key = pd.pd_key;
+			var app_id = pd.app_id;
+			var app_key = pd.app_key;
+			var pred_type = pd.pred_type;
+
+			var form = document.forms["fileform"];
+			if (form["file"].files.length > 0) {
+				var file = form["file"].files[0];
+				ReadFile(file, function (img_data) {
+					Predict(img_data, app_id, app_key, pd_id, pd_key, pred_type, function (ret_code, pred_data, result) {
+						console.log("正常执行识别", ret_code, pred_data, result);
+
+						alert(`响应码: ${ret_code}, 识别结果 ${result['result']} \n\n${JSON.stringify(pred_data)}`)
+					});
+				});
+			}
+		}
+
+	</script>
+	<form name="fileform" id="fileform" method="post" enctype="multipart/form-data" action="javascript:SelectFile();">
+		<input type='file' name="file" />
+		<input type="submit" value="识别" />
+	</form>
+</body>
+
+</html>
