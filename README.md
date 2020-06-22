@@ -61,7 +61,7 @@ img_data | 是 | string | 识别数据，图片的数据 (Base64编码)
 
 ```json
   {
-    "RetCode": “0”,
+    "RetCode": "0",
     "ErrMsg": "RetCode非0时，为具体的错误信息",
     "RequestId": "201707020038ae826793dc000501afdf",
     "RspData": "{\"result\":\"test\"}",
@@ -134,7 +134,7 @@ img_data | 是 | string | 识别数据，图片的数据 (Base64编码)
 
 联系客服咨询和开通服务 可提供试用授权码 自行通过test.html验证
 
-![客服微信](./wx.jpg)
+![客服微信](./wx.jpg "FuturePopeye")
 
 ## :)
 
