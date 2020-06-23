@@ -1,4 +1,4 @@
-# captcha-killer
+# captcha
 
 验证码识别服务 支持数字、字母、数字&字母类型 高识别率
 
