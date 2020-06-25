@@ -134,7 +134,8 @@ img_data | 是 | string | 识别数据，图片的数据 (Base64编码)
 
 联系客服咨询和开通服务 可提供试用授权码 自行通过test.html验证
 
-![客服微信](./wx.jpg "FuturePopeye") (wx: FuturePopeye)
+![客服微信](./wx.jpg "FuturePopeye") 
+(wx: FuturePopeye)
 
 ## :)
 
